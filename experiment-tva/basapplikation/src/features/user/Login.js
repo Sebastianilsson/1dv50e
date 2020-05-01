@@ -12,12 +12,11 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const login = async (values) => {
-    console.log("YES", values);
     setIsLoading(true);
     try {
       await dispatch(authenticateUser(values));
     } catch (e) {
-      form.resetFields(["password"]);
+      console.log(e);
     }
     setIsLoading(false);
   };
