@@ -5,11 +5,13 @@ import { Form, Row, Col, Input, Button } from "antd";
 const Login = () => {
   const [form] = Form.useForm();
   const [loginTime, setLoginTime] = useState(0);
+  const setFocus = React.createRef();
   let startTime = null;
   let endTime = null;
 
   useEffect(() => {
     startTime = performance.now();
+    setFocus.current.focus();
   }, []);
 
   const login = async (values) => {
@@ -49,7 +51,7 @@ const Login = () => {
                 },
               ]}
             >
-              <Input placeholder="Email" />
+              <Input placeholder="Email" ref={setFocus} />
             </Form.Item>
 
             <Form.Item
