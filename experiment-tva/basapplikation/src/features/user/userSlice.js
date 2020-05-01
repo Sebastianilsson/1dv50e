@@ -1,13 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { userLogin, userLogout } from "../../app/authSolution";
+import("../../app/authSolution").then((mod) => {
+  console.log(mod);
+  userLogin = mod.userLogin;
+  userLogout = mod.userLogout;
+});
+let userLogin, userLogout;
+
+const initialState = {
+  id: "",
+  isAuthenticated: false,
+  email: "",
+};
 
 export const slice = createSlice({
   name: "user",
-  initialState: {
-    id: "",
-    isAuthenticated: false,
-    email: "",
-  },
+  initialState,
   reducers: {
     login: (state, { payload }) => {
       const { id, isAuthenticated, email } = payload;
@@ -15,10 +22,8 @@ export const slice = createSlice({
       state.isAuthenticated = isAuthenticated;
       state.email = email;
     },
-    logout: (state, { payload }) => {
-      state.id = "";
-      state.isAuthenticated = false;
-      state.email = "";
+    logout: () => {
+      return initialState;
     },
   },
 });

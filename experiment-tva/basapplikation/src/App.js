@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Login from "./features/user/Login";
-import PrivateUserPage from "./features/user/PrivateUserPage";
+let PrivateUserPage = null;
 
 function App() {
+  useEffect(() => {
+    import("./features/user/PrivateUserPage").then((component) => {
+      PrivateUserPage = component;
+    });
+  }, []);
   return (
     <div className="App">
       <Switch>
