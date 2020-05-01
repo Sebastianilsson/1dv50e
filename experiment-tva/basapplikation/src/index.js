@@ -6,7 +6,6 @@ import store from "./app/store";
 import { HashRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import "antd/dist/antd.css";
-import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,5 +17,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-serviceWorker.unregister();
