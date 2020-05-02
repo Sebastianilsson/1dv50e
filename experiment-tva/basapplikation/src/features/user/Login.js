@@ -79,7 +79,12 @@ const Login = () => {
             </Form.Item>
 
             <Form.Item style={{ textAlign: "center" }}>
-              <Button disabled={false} loading={isLoading} htmlType="submit">
+              <Button
+                id="submitButton"
+                disabled={false}
+                loading={isLoading}
+                htmlType="submit"
+              >
                 Logga in!
               </Button>
             </Form.Item>
