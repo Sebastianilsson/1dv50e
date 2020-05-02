@@ -79,7 +79,7 @@ const Login = () => {
             {loginTime > 0 && <h2 align="center">Tid: {loginTime} ms</h2>}
 
             <Form.Item style={{ textAlign: "center" }}>
-              <Button disabled={false} htmlType="submit">
+              <Button id="submitButton" disabled={false} htmlType="submit">
                 Logga in!
               </Button>
             </Form.Item>
