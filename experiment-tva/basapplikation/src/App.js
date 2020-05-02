@@ -2,14 +2,11 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Login from "./features/user/Login";
-let PrivateUserPage = null;
+import PrivateUserPage from "./features/user/PrivateUserPage";
+
+// TODO tried to dynamically import PrivateUserPage in useEffect didn't word since it either got imported on every page render or were set to null on second render
 
 function App() {
-  useEffect(() => {
-    import("./features/user/PrivateUserPage").then((component) => {
-      PrivateUserPage = component;
-    });
-  }, []);
   return (
     <div className="App">
       <Switch>

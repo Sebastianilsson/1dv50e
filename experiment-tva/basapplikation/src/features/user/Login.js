@@ -16,12 +16,11 @@ const Login = () => {
     try {
       await dispatch(authenticateUser(values));
     } catch (e) {
-      console.log(e);
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
-  if (isAuthenticated) return <Redirect to={"/"} />;
+  if (isAuthenticated) return <Redirect to={"/privatePage"} />;
   return (
     <Row
       type="flex"
