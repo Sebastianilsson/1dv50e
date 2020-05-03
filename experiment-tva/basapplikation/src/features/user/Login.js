@@ -26,6 +26,15 @@ const Login = () => {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      window.loginClick = performance.now();
+      dispatch(
+        authenticateUser({ email: "test@test.se", password: "testtest" })
+      );
+    }, 1000);
+  }, [dispatch]);
+
+  useEffect(() => {
     window.firstRender = performance.now();
     getAuthSolution();
   }, []);
