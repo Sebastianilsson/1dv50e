@@ -1,21 +1,43 @@
 const puppeteer = require("puppeteer");
+const fs = require("fs");
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
-  const page = await browser.newPage();
-  await page.goto("http://localhost:3001/#/");
+  let result = [];
+  for (let index = 0; index < 3; index++) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto("http://localhost:3001/#/");
 
-  await page.type("#basic_email", "test@test.se");
-  await page.type("#basic_password", "testtest");
+    await page.type("#basic_email", "test@test.se");
+    await page.type("#basic_password", "testtest");
 
-  const [response] = await Promise.all([
-    page.waitForNavigation(),
-    page.click("#submitButton"),
-  ]);
+    const firstRender = await page.evaluate("firstRender");
+    console.log(firstRender);
 
-  await page.screenshot({ path: "example.png" });
+    const [response] = await Promise.all([
+      // page.click("#submitButton"),
+      page.waitForNavigation(),
+    ]);
 
-  console.log("Login performed!");
+    let times = await page.evaluate(() => {
+      return {
+        firstRender: firstRender.toFixed(0),
+        loginClick: loginClick.toFixed(0),
+        callToLogin: callToLogin.toFixed(0),
+        loginDone: loginDone.toFixed(0),
+        privatePageRendered: privatePageRendered.toFixed(0),
+      };
+    });
 
-  await browser.close();
+    result.push(times);
+
+    await browser.close();
+  }
+
+  let json = JSON.stringify(result);
+
+  fs.writeFile("result.json", json, (e) => {
+    if (e) throw e;
+    console.log("Done");
+  });
 })();
