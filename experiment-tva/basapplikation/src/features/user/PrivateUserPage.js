@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { getIsAuthenticated, getUserEmail, logoutUser } from "./userSlice";
@@ -8,6 +8,10 @@ const PrivateUserPage = () => {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector(getIsAuthenticated);
   const userEmail = useSelector(getUserEmail);
+
+  useEffect(() => {
+    window.privatePageRendered = performance.now();
+  }, []);
 
   const logout = async (e) => {
     e.preventDefault();

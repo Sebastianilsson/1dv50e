@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import validator from "validator";
 import { Form, Row, Col, Input, Button } from "antd";
 import { useSelector, useDispatch } from "react-redux";
-import { authenticateUser, getIsAuthenticated } from "./userSlice";
+import {
+  authenticateUser,
+  getIsAuthenticated,
+  getAuthSolution,
+} from "./userSlice";
 import { Redirect } from "react-router-dom";
 
 const Login = () => {
@@ -12,6 +16,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const login = async (values) => {
+    window.loginClick = performance.now();
     setIsLoading(true);
     try {
       await dispatch(authenticateUser(values));
@@ -19,6 +24,11 @@ const Login = () => {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    window.firstRender = performance.now();
+    getAuthSolution();
+  }, []);
 
   if (isAuthenticated) return <Redirect to={"/privatePage"} />;
   return (

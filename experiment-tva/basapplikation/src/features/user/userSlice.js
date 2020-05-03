@@ -1,14 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import("../../app/authSolution").then((mod) => {
-  setTimeout(async () => {
-    userLogin = mod.userLogin;
-    userLogout = mod.userLogout;
-    if (rememberAction.email && rememberAction.password)
-      await rememberAction.dispatch(authenticateUser(rememberAction));
-  }, 10000);
-});
-let userLogin, userLogout;
-const rememberAction = {};
 
 const initialState = {
   id: "",
@@ -34,20 +24,26 @@ export const slice = createSlice({
 
 export const { login, logout } = slice.actions;
 
+export const loadAuthSolution = () => {};
+
 export const authenticateUser = ({ email, password }) => async (dispatch) => {
   try {
-    let user = await userLogin(email, password);
+    let test = await getAuthSolution();
+    let user = await test.userLogin(email, password);
     dispatch(login(user));
   } catch (e) {
-    rememberAction.email = email;
-    rememberAction.password = password;
-    rememberAction.dispatch = dispatch;
+    console.error(e);
   }
 };
 
 export const logoutUser = () => async (dispatch) => {
-  await userLogout();
+  let test = await getAuthSolution();
+  await test.userLogout();
   dispatch(logout());
+};
+
+export const getAuthSolution = () => {
+  return import("../../app/authSolution");
 };
 
 export const getIsAuthenticated = (state) => state.user.isAuthenticated;
