@@ -6,6 +6,7 @@ import store from "./app/store";
 import { HashRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import "antd/dist/antd.css";
+require("dotenv").config();
 
 ReactDOM.render(
   <React.StrictMode>
