@@ -11,18 +11,35 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID,
 };
 
-export const userLogin = (email, password) => {
-  window.callToLogin = performance.now();
-  console.log(`Hej ${email}, du har lösenord: ${password}`);
-  window.loginDone = performance.now();
-  return {
-    id: "hejhej",
-    isAuthenticated: true,
-    email: "test@test.se",
-  };
+// Initialize Firebase
+const fb = firebase.initializeApp(firebaseConfig);
+
+// Initialize Auth Service
+const auth = fb.auth();
+
+export const userLogin = async (email, password) => {
+  try {
+    window.callToLogin = performance.now();
+    let res = await auth.signInWithEmailAndPassword(email, password);
+    window.loginDone = performance.now();
+    const { user } = res;
+    return {
+      id: user.uid,
+      isAuthenticated: true,
+      email: user.email,
+    };
+  } catch (e) {
+    if (e.code === "auth/wrong-password" || e.code === "auth/user-not-found")
+      throw new Error("Felaktig email eller lösenord");
+
+    throw new Error("Oväntat fel på servern, var god försök igen");
+  }
 };
 
-export const userLogout = () => {
-  console.log("Loggar ut");
-  return null;
+export const userLogout = async () => {
+  try {
+    return await auth.signOut();
+  } catch (e) {
+    throw new Error("Oväntat fel på servern, var god försök igen");
+  }
 };

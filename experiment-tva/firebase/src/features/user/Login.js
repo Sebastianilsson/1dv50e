@@ -14,13 +14,15 @@ const Login = () => {
   const isAuthenticated = useSelector(getIsAuthenticated);
   const [form] = Form.useForm();
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const login = async (values) => {
-    window.loginClick = performance.now();
+    setErrorMessage("");
     setIsLoading(true);
     try {
       await dispatch(authenticateUser(values));
     } catch (e) {
+      setErrorMessage(e.message);
       setIsLoading(false);
     }
   };
@@ -28,9 +30,14 @@ const Login = () => {
   useEffect(() => {
     setTimeout(() => {
       window.loginClick = performance.now();
-      dispatch(
-        authenticateUser({ email: "test@test.se", password: "testtest" })
-      );
+      try {
+        dispatch(
+          authenticateUser({ email: "test@test.se", password: "testtest" })
+        );
+      } catch (e) {
+        setErrorMessage(e.message);
+        setIsLoading(false);
+      }
     }, 1000);
   }, [dispatch]);
 
@@ -96,6 +103,8 @@ const Login = () => {
             >
               <Input.Password placeholder="Lösenord" />
             </Form.Item>
+
+            {errorMessage !== "" && <div id="errorMessage">{errorMessage}</div>}
 
             <Form.Item style={{ textAlign: "center" }}>
               <Button
