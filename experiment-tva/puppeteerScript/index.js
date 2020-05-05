@@ -1,12 +1,17 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
+const jsonFileNames = ["baseResult.json", "firebaseResult.json"];
+let services = ["http://localhost:3001/#/", "http://localhost:3002/#/"];
+let nrOfInvocations = [0, 0];
+let activeService;
+let baseResult = [];
+let firebaseResult = [];
 
 (async () => {
-  let result = [];
-  for (let index = 0; index < 3; index++) {
+  for (let index = 0; index < 4; index++) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto("http://localhost:3001/#/");
+    await goToRandomService(page);
 
     await page.type("#basic_email", "test@test.se");
     await page.type("#basic_password", "testtest");
@@ -14,10 +19,7 @@ const fs = require("fs");
     const firstRender = await page.evaluate("firstRender");
     console.log(firstRender);
 
-    const [response] = await Promise.all([
-      // page.click("#submitButton"),
-      page.waitForNavigation(),
-    ]);
+    await page.waitForNavigation();
 
     let times = await page.evaluate(() => {
       return {
@@ -29,15 +31,37 @@ const fs = require("fs");
       };
     });
 
-    result.push(times);
+    pushToResultArray(times);
 
     await browser.close();
   }
 
-  let json = JSON.stringify(result);
-
-  fs.writeFile("result.json", json, (e) => {
-    if (e) throw e;
-    console.log("Done");
-  });
+  writeResultsToJsonFiles();
 })();
+
+const goToRandomService = (page) => {
+  let randomValue = Math.floor(Math.random() * Math.floor(services.length));
+  nrOfInvocations[randomValue]++;
+  activeService = services[randomValue];
+  if (nrOfInvocations[randomValue] >= 2) services.splice(randomValue, 1);
+  console.log(nrOfInvocations);
+  return page.goto(activeService);
+};
+
+const pushToResultArray = (times) => {
+  if (activeService === "http://localhost:3001/#/") baseResult.push(times);
+  if (activeService === "http://localhost:3002/#/") firebaseResult.push(times);
+};
+
+const writeResultsToJsonFiles = () => {
+  let baseJson = JSON.stringify(baseResult);
+  let firebaseJson = JSON.stringify(firebaseResult);
+
+  fs.writeFile("baseResult.json", baseJson, (e) => {
+    if (e) throw e;
+  });
+
+  fs.writeFile("firebaseResult.json", firebaseJson, (e) => {
+    if (e) throw e;
+  });
+};
