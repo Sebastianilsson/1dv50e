@@ -1,4 +1,4 @@
-import Amplify from "aws-amplify";
+import Amplify, { Auth } from "aws-amplify";
 
 Amplify.configure({
   Auth: {
@@ -9,18 +9,22 @@ Amplify.configure({
   },
 });
 
-export const userLogin = (email, password) => {
-  window.callToLogin = performance.now();
-  console.log(`Hej ${email}, du har lösenord: ${password}`);
-  window.loginDone = performance.now();
-  return {
-    id: "hejhej",
-    isAuthenticated: true,
-    email: "test@test.se",
-  };
+export const userLogin = async (email, password) => {
+  try {
+    window.callToLogin = performance.now();
+    let user = await Auth.signIn(email, password);
+    window.loginDone = performance.now();
+    return {
+      id: user.userDataKey,
+      isAuthenticated: true,
+      email: user.challengeParam.userAttributes.email,
+    };
+  } catch (e) {
+    console.log(e);
+  }
 };
 
-export const userLogout = () => {
-  console.log("Loggar ut");
+export const userLogout = async () => {
+  await Auth.signOut();
   return null;
 };

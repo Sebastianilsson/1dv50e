@@ -28,8 +28,8 @@ export const loadAuthSolution = () => {};
 
 export const authenticateUser = ({ email, password }) => async (dispatch) => {
   try {
-    let test = await getAuthSolution();
-    let user = await test.userLogin(email, password);
+    let auth = await getAuthSolution();
+    let user = await auth.userLogin(email, password);
     dispatch(login(user));
   } catch (e) {
     console.error(e);
@@ -37,8 +37,8 @@ export const authenticateUser = ({ email, password }) => async (dispatch) => {
 };
 
 export const logoutUser = () => async (dispatch) => {
-  let test = await getAuthSolution();
-  await test.userLogout();
+  let auth = await getAuthSolution();
+  await auth.userLogout();
   dispatch(logout());
 };
 
