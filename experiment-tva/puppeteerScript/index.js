@@ -2,7 +2,8 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const jsonFileNames = ["baseResult.json", "firebaseResult.json"];
 let services = ["http://localhost:3001/#/", "http://localhost:3002/#/"];
-let nrOfInvocations = [0, 0];
+let invocations = [0, 0];
+let nrOfInvocationsPerService = 2;
 let activeService;
 let baseResult = [];
 let firebaseResult = [];
@@ -31,7 +32,7 @@ let firebaseResult = [];
       };
     });
 
-    pushToResultArray(times);
+    pushToResultArrayAndIncreaseInvocationCount(times);
 
     await browser.close();
   }
@@ -41,16 +42,23 @@ let firebaseResult = [];
 
 const goToRandomService = (page) => {
   let randomValue = Math.floor(Math.random() * Math.floor(services.length));
-  nrOfInvocations[randomValue]++;
   activeService = services[randomValue];
-  if (nrOfInvocations[randomValue] >= 2) services.splice(randomValue, 1);
-  console.log(nrOfInvocations);
   return page.goto(activeService);
 };
 
-const pushToResultArray = (times) => {
-  if (activeService === "http://localhost:3001/#/") baseResult.push(times);
-  if (activeService === "http://localhost:3002/#/") firebaseResult.push(times);
+const pushToResultArrayAndIncreaseInvocationCount = (times) => {
+  let serviceIndex;
+  if (activeService === "http://localhost:3001/#/") {
+    serviceIndex = 0;
+    baseResult.push(times);
+  } else if (activeService === "http://localhost:3002/#/") {
+    serviceIndex = 1;
+    firebaseResult.push(times);
+  }
+  invocations[serviceIndex]++;
+  if (invocations[serviceIndex] >= nrOfInvocationsPerService)
+    services.splice(services.indexOf(activeService), 1);
+  console.log(invocations, services);
 };
 
 const writeResultsToJsonFiles = () => {
