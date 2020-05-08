@@ -2,26 +2,28 @@ import { UserAgentApplication } from "msal";
 
 const msalApp = new UserAgentApplication({
   auth: {
-    clientId: "245e9392-c666-4d51-8f8a-bfd9e55b2456",
-    authority: "https://login.microsoftonline.com/common",
-    validateAuthority: true,
-    postLogoutRedirectUri: "http://localhost:3000",
-    navigateToLoginRequestUrl: false,
+    clientId: process.env.REACT_APP_CLIENT_ID,
+    authority: process.REACT_APP_AUTHORITY,
+    validateAuthority: false,
+    postLogoutRedirectUri:
+      process.env.REACT_APP_VALIDATE_POST_LOGOUT_REDIRECT_URI,
+    navigateToLoginRequestUrl: true,
+  },
+  cache: {
+    cacheLocation: "sessionStorage",
   },
 });
 
-export const userLogin = (email, password) => {
+export const userLogin = async (email, password) => {
   window.callToLogin = performance.now();
   console.log(`Hej ${email}, du har lösenord: ${password}`);
+  await msalApp.loginRedirect({});
+  let test = await msalApp.getAccount();
   window.loginDone = performance.now();
-  return {
-    id: "hejhej",
-    isAuthenticated: true,
-    email: "test@test.se",
-  };
+  return { email: test.userName, isAuthenticated: true, id: test.idToken };
 };
 
 export const userLogout = () => {
-  console.log("Loggar ut");
+  msalApp.logout();
   return null;
 };

@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path={"/"}>
-          <Login />
-        </Route>
         <Route exact path={"/privatePage"}>
           <PrivateUserPage />
+        </Route>
+        <Route path={"/"}>
+          <Login />
         </Route>
         <Route render={() => <Redirect to="/" />} />
       </Switch>

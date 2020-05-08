@@ -27,19 +27,19 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      window.loginClick = performance.now();
-      try {
-        dispatch(
-          authenticateUser({ email: "test@test.se", password: "testtest" })
-        );
-      } catch (e) {
-        setErrorMessage(e.message);
-        setIsLoading(false);
-      }
-    }, 1000);
-  }, [dispatch]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     window.loginClick = performance.now();
+  //     try {
+  //       dispatch(
+  //         authenticateUser({ email: "test@test.se", password: "testtest" })
+  //       );
+  //     } catch (e) {
+  //       setErrorMessage(e.message);
+  //       setIsLoading(false);
+  //     }
+  //   }, 1000);
+  // }, [dispatch]);
 
   useEffect(() => {
     window.firstRender = performance.now();
@@ -59,7 +59,15 @@ const Login = () => {
           <h2 align="center" type="primary">
             Logga in
           </h2>
-          <Form name="basic" onFinish={login} form={form}>
+          <Button
+            id="submitButton"
+            disabled={false}
+            loading={isLoading}
+            onClick={login}
+          >
+            Logga in!
+          </Button>
+          {/* <Form name="basic" onFinish={login} form={form}>
             <Form.Item
               name="email"
               validateFirst={true}
@@ -116,7 +124,7 @@ const Login = () => {
                 Logga in!
               </Button>
             </Form.Item>
-          </Form>
+          </Form> */}
         </div>
       </Col>
     </Row>
