@@ -1,0 +1,29 @@
+{
+  "name": "nosql-user-auth-server",
+  "version": "1.0.0",
+  "description": "API for handling user authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebastianilsson/nosql-user-auth-server.git"
+  },
+  "author": "Sebastian Nilsson - sn222zh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebastianilsson/nosql-user-auth-server/issues"
+  },
+  "homepage": "https://github.com/Sebastianilsson/nosql-user-auth-server#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "mongoose": "^5.9.13",
+    "uuid": "^8.0.0"
+  }
+}
