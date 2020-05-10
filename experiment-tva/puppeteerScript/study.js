@@ -7,23 +7,31 @@ const firebase = "http://localhost:3002/#/";
 let services = [nosql, aws, firebase]; // Add new URL for every new solution
 let invocations = [0, 0, 0]; // Add new item for every new solution
 
-let nrOfInvocationsPerService = 2;
+let nrOfInvocationsPerService = 100;
 const nrOfLoops = nrOfInvocationsPerService * services.length;
 let activeService;
 
 let nosqlResult = [];
 let awsResult = [];
 let firebaseResult = [];
-
-const timestamp = new Date(
-  new Date().toString().split("GMT")[0] + " UTC"
-).toISOString();
 // Add new result array for every new solution
+
+let date = new Date();
+const timestamp = `${date.getFullYear()}0${date.getMonth()}${date.getDate()}_${date.getHours()}_${date.getMinutes()}_${date.getSeconds()}`;
 
 (async () => {
   for (let index = 0; index < nrOfLoops; index++) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
+
+    const client = await page.target().createCDPSession();
+    await client.send("Network.emulateNetworkConditions", {
+      offline: false,
+      downloadThroughput: 9306112, // 71 Mbit/s
+      uploadThroughput: 655360, // 5 Mbit/s
+      latency: 0,
+    });
+
     await goToRandomService(page);
 
     await page.waitForNavigation();
@@ -78,16 +86,20 @@ const writeResultsToJsonFiles = () => {
   let firebaseJson = JSON.stringify(firebaseResult);
   // Add new result -> json for every new solution
 
-  fs.writeFile("./nosql/nosqlResult.json", nosqlJson, (e) => {
+  fs.writeFile(`./nosql/nosqlResult${timestamp}.json`, nosqlJson, (e) => {
     if (e) throw e;
   });
 
-  fs.writeFile("./aws/awsResult.json", awsJson, (e) => {
+  fs.writeFile(`./aws/awsResult${timestamp}.json`, awsJson, (e) => {
     if (e) throw e;
   });
 
-  fs.writeFile("./firebase/firebaseResult.json", firebaseJson, (e) => {
-    if (e) throw e;
-  });
+  fs.writeFile(
+    `./firebase/firebaseResult${timestamp}.json`,
+    firebaseJson,
+    (e) => {
+      if (e) throw e;
+    }
+  );
   // Add new write result to file for every new solution
 };
