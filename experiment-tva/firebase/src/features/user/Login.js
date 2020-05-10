@@ -38,7 +38,7 @@ const Login = () => {
         setErrorMessage(e.message);
         setIsLoading(false);
       }
-    }, 1000);
+    }, 4556);
   }, [dispatch]);
 
   useEffect(() => {
