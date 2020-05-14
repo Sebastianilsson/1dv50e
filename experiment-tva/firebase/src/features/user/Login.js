@@ -15,6 +15,8 @@ const Login = () => {
   const [form] = Form.useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const date = new Date();
+  window.timestamp = `${date.getFullYear()}0${date.getMonth()}${date.getDate()}-${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 
   const login = async (values) => {
     setErrorMessage("");
