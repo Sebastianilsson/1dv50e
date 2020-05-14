@@ -17,7 +17,7 @@ let firebaseResult = [];
 // Add new result array for every new solution
 
 let date = new Date();
-const timestamp = `${date.getFullYear()}0${date.getMonth()}${date.getDate()}_${date.getHours()}_${date.getMinutes()}_${date.getSeconds()}`;
+const fileTimestamp = `${date.getFullYear()}0${date.getMonth()}${date.getDate()}_${date.getHours()}_${date.getMinutes()}_${date.getSeconds()}`;
 
 (async () => {
   for (let index = 0; index < nrOfLoops; index++) {
@@ -37,13 +37,21 @@ const timestamp = `${date.getFullYear()}0${date.getMonth()}${date.getDate()}_${d
     await page.waitForNavigation();
 
     let times = await page.evaluate(() => {
-      return {
+      const times = {
+        timestamp: timestamp,
         firstRender: firstRender.toFixed(0),
         loginClick: loginClick.toFixed(0),
         callToLogin: callToLogin.toFixed(0),
         loginDone: loginDone.toFixed(0),
         privatePageRendered: privatePageRendered.toFixed(0),
       };
+      delete window.timestamp;
+      delete window.firstRender;
+      delete window.loginClick;
+      delete window.callToLogin;
+      delete window.loginDone;
+      delete window.privatePageRendered;
+      return times;
     });
 
     pushToResultArrayAndIncreaseInvocationCount(times);
@@ -56,9 +64,7 @@ const timestamp = `${date.getFullYear()}0${date.getMonth()}${date.getDate()}_${d
 
 const goToRandomService = (page) => {
   let randomValue = Math.floor(Math.random() * Math.floor(services.length));
-  console.log(randomValue);
   activeService = services[randomValue];
-  console.log(activeService);
   return page.goto(activeService);
 };
 
@@ -77,7 +83,6 @@ const pushToResultArrayAndIncreaseInvocationCount = (times) => {
   invocations[serviceIndex]++;
   if (invocations[serviceIndex] >= nrOfInvocationsPerService)
     services.splice(services.indexOf(activeService), 1);
-  console.log(invocations, services);
 };
 
 const writeResultsToJsonFiles = () => {
@@ -86,20 +91,21 @@ const writeResultsToJsonFiles = () => {
   let firebaseJson = JSON.stringify(firebaseResult);
   // Add new result -> json for every new solution
 
-  fs.writeFile(`./nosql/nosqlResult${timestamp}.json`, nosqlJson, (e) => {
+  fs.writeFile(`./nosql/nosqlResult${fileTimestamp}.json`, nosqlJson, (e) => {
     if (e) throw e;
   });
 
-  fs.writeFile(`./aws/awsResult${timestamp}.json`, awsJson, (e) => {
+  fs.writeFile(`./aws/awsResult${fileTimestamp}.json`, awsJson, (e) => {
     if (e) throw e;
   });
 
   fs.writeFile(
-    `./firebase/firebaseResult${timestamp}.json`,
+    `./firebase/firebaseResult${fileTimestamp}.json`,
     firebaseJson,
     (e) => {
       if (e) throw e;
     }
   );
+  console.log("done writing to files");
   // Add new write result to file for every new solution
 };
