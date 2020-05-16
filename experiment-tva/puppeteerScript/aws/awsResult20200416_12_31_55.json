@@ -1,0 +1,802 @@
+[
+  {
+    "timestamp": "20200416-12:32:10",
+    "firstRender": "997",
+    "loginClick": "5554",
+    "callToLogin": "5581",
+    "loginDone": "6630",
+    "privatePageRendered": "6642"
+  },
+  {
+    "timestamp": "20200416-12:32:31",
+    "firstRender": "917",
+    "loginClick": "5474",
+    "callToLogin": "5488",
+    "loginDone": "6431",
+    "privatePageRendered": "6443"
+  },
+  {
+    "timestamp": "20200416-12:32:44",
+    "firstRender": "948",
+    "loginClick": "5504",
+    "callToLogin": "5519",
+    "loginDone": "6498",
+    "privatePageRendered": "6510"
+  },
+  {
+    "timestamp": "20200416-12:33:5",
+    "firstRender": "945",
+    "loginClick": "5502",
+    "callToLogin": "5516",
+    "loginDone": "6488",
+    "privatePageRendered": "6501"
+  },
+  {
+    "timestamp": "20200416-12:33:33",
+    "firstRender": "914",
+    "loginClick": "5472",
+    "callToLogin": "5495",
+    "loginDone": "6476",
+    "privatePageRendered": "6488"
+  },
+  {
+    "timestamp": "20200416-12:33:47",
+    "firstRender": "964",
+    "loginClick": "5521",
+    "callToLogin": "5535",
+    "loginDone": "6461",
+    "privatePageRendered": "6474"
+  },
+  {
+    "timestamp": "20200416-12:34:8",
+    "firstRender": "935",
+    "loginClick": "5492",
+    "callToLogin": "5510",
+    "loginDone": "6430",
+    "privatePageRendered": "6454"
+  },
+  {
+    "timestamp": "20200416-12:34:15",
+    "firstRender": "957",
+    "loginClick": "5515",
+    "callToLogin": "5547",
+    "loginDone": "6523",
+    "privatePageRendered": "6536"
+  },
+  {
+    "timestamp": "20200416-12:34:36",
+    "firstRender": "950",
+    "loginClick": "5506",
+    "callToLogin": "5533",
+    "loginDone": "6554",
+    "privatePageRendered": "6567"
+  },
+  {
+    "timestamp": "20200416-12:35:11",
+    "firstRender": "950",
+    "loginClick": "5507",
+    "callToLogin": "5521",
+    "loginDone": "6514",
+    "privatePageRendered": "6530"
+  },
+  {
+    "timestamp": "20200416-12:35:32",
+    "firstRender": "921",
+    "loginClick": "5479",
+    "callToLogin": "5494",
+    "loginDone": "6406",
+    "privatePageRendered": "6421"
+  },
+  {
+    "timestamp": "20200416-12:36:0",
+    "firstRender": "936",
+    "loginClick": "5493",
+    "callToLogin": "5507",
+    "loginDone": "6527",
+    "privatePageRendered": "6549"
+  },
+  {
+    "timestamp": "20200416-12:36:15",
+    "firstRender": "936",
+    "loginClick": "5494",
+    "callToLogin": "5508",
+    "loginDone": "6452",
+    "privatePageRendered": "6465"
+  },
+  {
+    "timestamp": "20200416-12:36:22",
+    "firstRender": "911",
+    "loginClick": "5468",
+    "callToLogin": "5481",
+    "loginDone": "6398",
+    "privatePageRendered": "6410"
+  },
+  {
+    "timestamp": "20200416-12:36:44",
+    "firstRender": "932",
+    "loginClick": "5489",
+    "callToLogin": "5517",
+    "loginDone": "6447",
+    "privatePageRendered": "6464"
+  },
+  {
+    "timestamp": "20200416-12:36:58",
+    "firstRender": "936",
+    "loginClick": "5494",
+    "callToLogin": "5526",
+    "loginDone": "6531",
+    "privatePageRendered": "6543"
+  },
+  {
+    "timestamp": "20200416-12:37:19",
+    "firstRender": "942",
+    "loginClick": "5499",
+    "callToLogin": "5513",
+    "loginDone": "6433",
+    "privatePageRendered": "6449"
+  },
+  {
+    "timestamp": "20200416-12:37:40",
+    "firstRender": "960",
+    "loginClick": "5518",
+    "callToLogin": "5546",
+    "loginDone": "6499",
+    "privatePageRendered": "6511"
+  },
+  {
+    "timestamp": "20200416-12:38:8",
+    "firstRender": "947",
+    "loginClick": "5504",
+    "callToLogin": "5518",
+    "loginDone": "6476",
+    "privatePageRendered": "6489"
+  },
+  {
+    "timestamp": "20200416-12:39:11",
+    "firstRender": "948",
+    "loginClick": "5505",
+    "callToLogin": "5532",
+    "loginDone": "6503",
+    "privatePageRendered": "6516"
+  },
+  {
+    "timestamp": "20200416-12:40:26",
+    "firstRender": "943",
+    "loginClick": "5500",
+    "callToLogin": "5525",
+    "loginDone": "6514",
+    "privatePageRendered": "6527"
+  },
+  {
+    "timestamp": "20200416-12:41:28",
+    "firstRender": "941",
+    "loginClick": "5499",
+    "callToLogin": "5532",
+    "loginDone": "6547",
+    "privatePageRendered": "6564"
+  },
+  {
+    "timestamp": "20200416-12:41:35",
+    "firstRender": "961",
+    "loginClick": "5519",
+    "callToLogin": "5554",
+    "loginDone": "6474",
+    "privatePageRendered": "6486"
+  },
+  {
+    "timestamp": "20200416-12:41:49",
+    "firstRender": "936",
+    "loginClick": "5494",
+    "callToLogin": "5527",
+    "loginDone": "6435",
+    "privatePageRendered": "6448"
+  },
+  {
+    "timestamp": "20200416-12:41:56",
+    "firstRender": "926",
+    "loginClick": "5483",
+    "callToLogin": "5497",
+    "loginDone": "6455",
+    "privatePageRendered": "6468"
+  },
+  {
+    "timestamp": "20200416-12:42:31",
+    "firstRender": "956",
+    "loginClick": "5513",
+    "callToLogin": "5536",
+    "loginDone": "6490",
+    "privatePageRendered": "6502"
+  },
+  {
+    "timestamp": "20200416-12:42:38",
+    "firstRender": "955",
+    "loginClick": "5514",
+    "callToLogin": "5546",
+    "loginDone": "6473",
+    "privatePageRendered": "6485"
+  },
+  {
+    "timestamp": "20200416-12:44:1",
+    "firstRender": "944",
+    "loginClick": "5502",
+    "callToLogin": "5516",
+    "loginDone": "6517",
+    "privatePageRendered": "6529"
+  },
+  {
+    "timestamp": "20200416-12:44:22",
+    "firstRender": "923",
+    "loginClick": "5480",
+    "callToLogin": "5495",
+    "loginDone": "6423",
+    "privatePageRendered": "6435"
+  },
+  {
+    "timestamp": "20200416-12:44:50",
+    "firstRender": "932",
+    "loginClick": "5489",
+    "callToLogin": "5518",
+    "loginDone": "6438",
+    "privatePageRendered": "6450"
+  },
+  {
+    "timestamp": "20200416-12:45:17",
+    "firstRender": "934",
+    "loginClick": "5491",
+    "callToLogin": "5505",
+    "loginDone": "6456",
+    "privatePageRendered": "6474"
+  },
+  {
+    "timestamp": "20200416-12:45:32",
+    "firstRender": "944",
+    "loginClick": "5501",
+    "callToLogin": "5526",
+    "loginDone": "6547",
+    "privatePageRendered": "6573"
+  },
+  {
+    "timestamp": "20200416-12:45:53",
+    "firstRender": "952",
+    "loginClick": "5509",
+    "callToLogin": "5536",
+    "loginDone": "6492",
+    "privatePageRendered": "6508"
+  },
+  {
+    "timestamp": "20200416-12:46:14",
+    "firstRender": "945",
+    "loginClick": "5502",
+    "callToLogin": "5517",
+    "loginDone": "6437",
+    "privatePageRendered": "6449"
+  },
+  {
+    "timestamp": "20200416-12:46:21",
+    "firstRender": "939",
+    "loginClick": "5496",
+    "callToLogin": "5518",
+    "loginDone": "6513",
+    "privatePageRendered": "6525"
+  },
+  {
+    "timestamp": "20200416-12:47:17",
+    "firstRender": "926",
+    "loginClick": "5483",
+    "callToLogin": "5498",
+    "loginDone": "6406",
+    "privatePageRendered": "6417"
+  },
+  {
+    "timestamp": "20200416-12:47:24",
+    "firstRender": "1013",
+    "loginClick": "5570",
+    "callToLogin": "5584",
+    "loginDone": "6568",
+    "privatePageRendered": "6580"
+  },
+  {
+    "timestamp": "20200416-12:47:45",
+    "firstRender": "926",
+    "loginClick": "5483",
+    "callToLogin": "5513",
+    "loginDone": "6428",
+    "privatePageRendered": "6440"
+  },
+  {
+    "timestamp": "20200416-12:48:33",
+    "firstRender": "964",
+    "loginClick": "5522",
+    "callToLogin": "5535",
+    "loginDone": "6501",
+    "privatePageRendered": "6516"
+  },
+  {
+    "timestamp": "20200416-12:48:40",
+    "firstRender": "930",
+    "loginClick": "5489",
+    "callToLogin": "5506",
+    "loginDone": "6427",
+    "privatePageRendered": "6451"
+  },
+  {
+    "timestamp": "20200416-12:48:54",
+    "firstRender": "935",
+    "loginClick": "5493",
+    "callToLogin": "5509",
+    "loginDone": "6469",
+    "privatePageRendered": "6482"
+  },
+  {
+    "timestamp": "20200416-12:49:22",
+    "firstRender": "923",
+    "loginClick": "5481",
+    "callToLogin": "5495",
+    "loginDone": "6389",
+    "privatePageRendered": "6401"
+  },
+  {
+    "timestamp": "20200416-12:49:37",
+    "firstRender": "956",
+    "loginClick": "5513",
+    "callToLogin": "5527",
+    "loginDone": "6496",
+    "privatePageRendered": "6508"
+  },
+  {
+    "timestamp": "20200416-12:49:44",
+    "firstRender": "953",
+    "loginClick": "5510",
+    "callToLogin": "5533",
+    "loginDone": "6498",
+    "privatePageRendered": "6510"
+  },
+  {
+    "timestamp": "20200416-12:49:51",
+    "firstRender": "947",
+    "loginClick": "5506",
+    "callToLogin": "5519",
+    "loginDone": "6443",
+    "privatePageRendered": "6455"
+  },
+  {
+    "timestamp": "20200416-12:50:4",
+    "firstRender": "942",
+    "loginClick": "5500",
+    "callToLogin": "5513",
+    "loginDone": "6485",
+    "privatePageRendered": "6498"
+  },
+  {
+    "timestamp": "20200416-12:50:12",
+    "firstRender": "947",
+    "loginClick": "5503",
+    "callToLogin": "5525",
+    "loginDone": "6495",
+    "privatePageRendered": "6512"
+  },
+  {
+    "timestamp": "20200416-12:50:19",
+    "firstRender": "957",
+    "loginClick": "5514",
+    "callToLogin": "5528",
+    "loginDone": "6451",
+    "privatePageRendered": "6466"
+  },
+  {
+    "timestamp": "20200416-12:50:26",
+    "firstRender": "960",
+    "loginClick": "5517",
+    "callToLogin": "5533",
+    "loginDone": "6462",
+    "privatePageRendered": "6474"
+  },
+  {
+    "timestamp": "20200416-12:51:8",
+    "firstRender": "933",
+    "loginClick": "5490",
+    "callToLogin": "5506",
+    "loginDone": "6483",
+    "privatePageRendered": "6495"
+  },
+  {
+    "timestamp": "20200416-12:51:36",
+    "firstRender": "965",
+    "loginClick": "5522",
+    "callToLogin": "5550",
+    "loginDone": "6497",
+    "privatePageRendered": "6509"
+  },
+  {
+    "timestamp": "20200416-12:51:50",
+    "firstRender": "983",
+    "loginClick": "5540",
+    "callToLogin": "5560",
+    "loginDone": "6501",
+    "privatePageRendered": "6514"
+  },
+  {
+    "timestamp": "20200416-12:52:24",
+    "firstRender": "954",
+    "loginClick": "5511",
+    "callToLogin": "5527",
+    "loginDone": "6459",
+    "privatePageRendered": "6471"
+  },
+  {
+    "timestamp": "20200416-12:52:31",
+    "firstRender": "910",
+    "loginClick": "5467",
+    "callToLogin": "5482",
+    "loginDone": "6444",
+    "privatePageRendered": "6461"
+  },
+  {
+    "timestamp": "20200416-12:53:13",
+    "firstRender": "936",
+    "loginClick": "5493",
+    "callToLogin": "5516",
+    "loginDone": "6463",
+    "privatePageRendered": "6481"
+  },
+  {
+    "timestamp": "20200416-12:53:46",
+    "firstRender": "915",
+    "loginClick": "5472",
+    "callToLogin": "5493",
+    "loginDone": "6526",
+    "privatePageRendered": "6541"
+  },
+  {
+    "timestamp": "20200416-12:53:53",
+    "firstRender": "912",
+    "loginClick": "5469",
+    "callToLogin": "5485",
+    "loginDone": "6398",
+    "privatePageRendered": "6410"
+  },
+  {
+    "timestamp": "20200416-12:54:7",
+    "firstRender": "942",
+    "loginClick": "5499",
+    "callToLogin": "5522",
+    "loginDone": "6471",
+    "privatePageRendered": "6483"
+  },
+  {
+    "timestamp": "20200416-12:54:28",
+    "firstRender": "930",
+    "loginClick": "5488",
+    "callToLogin": "5502",
+    "loginDone": "6444",
+    "privatePageRendered": "6457"
+  },
+  {
+    "timestamp": "20200416-12:55:4",
+    "firstRender": "921",
+    "loginClick": "5478",
+    "callToLogin": "5492",
+    "loginDone": "6452",
+    "privatePageRendered": "6464"
+  },
+  {
+    "timestamp": "20200416-12:55:39",
+    "firstRender": "929",
+    "loginClick": "5486",
+    "callToLogin": "5510",
+    "loginDone": "6455",
+    "privatePageRendered": "6472"
+  },
+  {
+    "timestamp": "20200416-12:55:46",
+    "firstRender": "932",
+    "loginClick": "5490",
+    "callToLogin": "5504",
+    "loginDone": "6435",
+    "privatePageRendered": "6447"
+  },
+  {
+    "timestamp": "20200416-12:56:13",
+    "firstRender": "940",
+    "loginClick": "5497",
+    "callToLogin": "5510",
+    "loginDone": "6473",
+    "privatePageRendered": "6486"
+  },
+  {
+    "timestamp": "20200416-12:56:54",
+    "firstRender": "944",
+    "loginClick": "5501",
+    "callToLogin": "5525",
+    "loginDone": "6497",
+    "privatePageRendered": "6509"
+  },
+  {
+    "timestamp": "20200416-12:57:8",
+    "firstRender": "942",
+    "loginClick": "5498",
+    "callToLogin": "5513",
+    "loginDone": "6429",
+    "privatePageRendered": "6442"
+  },
+  {
+    "timestamp": "20200416-12:58:11",
+    "firstRender": "926",
+    "loginClick": "5483",
+    "callToLogin": "5513",
+    "loginDone": "6485",
+    "privatePageRendered": "6498"
+  },
+  {
+    "timestamp": "20200416-12:58:39",
+    "firstRender": "939",
+    "loginClick": "5496",
+    "callToLogin": "5523",
+    "loginDone": "6474",
+    "privatePageRendered": "6496"
+  },
+  {
+    "timestamp": "20200416-12:59:14",
+    "firstRender": "915",
+    "loginClick": "5471",
+    "callToLogin": "5485",
+    "loginDone": "6465",
+    "privatePageRendered": "6478"
+  },
+  {
+    "timestamp": "20200416-12:59:21",
+    "firstRender": "947",
+    "loginClick": "5506",
+    "callToLogin": "5535",
+    "loginDone": "6454",
+    "privatePageRendered": "6466"
+  },
+  {
+    "timestamp": "20200416-12:59:28",
+    "firstRender": "921",
+    "loginClick": "5479",
+    "callToLogin": "5497",
+    "loginDone": "6436",
+    "privatePageRendered": "6449"
+  },
+  {
+    "timestamp": "20200416-13:0:31",
+    "firstRender": "928",
+    "loginClick": "5486",
+    "callToLogin": "5510",
+    "loginDone": "6503",
+    "privatePageRendered": "6516"
+  },
+  {
+    "timestamp": "20200416-13:1:13",
+    "firstRender": "934",
+    "loginClick": "5491",
+    "callToLogin": "5505",
+    "loginDone": "6431",
+    "privatePageRendered": "6443"
+  },
+  {
+    "timestamp": "20200416-13:1:42",
+    "firstRender": "935",
+    "loginClick": "5492",
+    "callToLogin": "5528",
+    "loginDone": "6492",
+    "privatePageRendered": "6504"
+  },
+  {
+    "timestamp": "20200416-13:1:56",
+    "firstRender": "958",
+    "loginClick": "5515",
+    "callToLogin": "5529",
+    "loginDone": "6496",
+    "privatePageRendered": "6508"
+  },
+  {
+    "timestamp": "20200416-13:2:3",
+    "firstRender": "991",
+    "loginClick": "5548",
+    "callToLogin": "5562",
+    "loginDone": "6523",
+    "privatePageRendered": "6536"
+  },
+  {
+    "timestamp": "20200416-13:2:18",
+    "firstRender": "936",
+    "loginClick": "5494",
+    "callToLogin": "5516",
+    "loginDone": "6498",
+    "privatePageRendered": "6510"
+  },
+  {
+    "timestamp": "20200416-13:2:31",
+    "firstRender": "915",
+    "loginClick": "5473",
+    "callToLogin": "5487",
+    "loginDone": "6513",
+    "privatePageRendered": "6525"
+  },
+  {
+    "timestamp": "20200416-13:2:45",
+    "firstRender": "963",
+    "loginClick": "5521",
+    "callToLogin": "5554",
+    "loginDone": "6507",
+    "privatePageRendered": "6519"
+  },
+  {
+    "timestamp": "20200416-13:2:52",
+    "firstRender": "938",
+    "loginClick": "5495",
+    "callToLogin": "5509",
+    "loginDone": "6438",
+    "privatePageRendered": "6451"
+  },
+  {
+    "timestamp": "20200416-13:2:59",
+    "firstRender": "981",
+    "loginClick": "5538",
+    "callToLogin": "5552",
+    "loginDone": "6503",
+    "privatePageRendered": "6516"
+  },
+  {
+    "timestamp": "20200416-13:3:6",
+    "firstRender": "949",
+    "loginClick": "5507",
+    "callToLogin": "5540",
+    "loginDone": "6472",
+    "privatePageRendered": "6484"
+  },
+  {
+    "timestamp": "20200416-13:3:20",
+    "firstRender": "947",
+    "loginClick": "5505",
+    "callToLogin": "5519",
+    "loginDone": "6437",
+    "privatePageRendered": "6450"
+  },
+  {
+    "timestamp": "20200416-13:3:47",
+    "firstRender": "917",
+    "loginClick": "5475",
+    "callToLogin": "5508",
+    "loginDone": "6449",
+    "privatePageRendered": "6461"
+  },
+  {
+    "timestamp": "20200416-13:4:14",
+    "firstRender": "929",
+    "loginClick": "5487",
+    "callToLogin": "5514",
+    "loginDone": "6498",
+    "privatePageRendered": "6510"
+  },
+  {
+    "timestamp": "20200416-13:4:34",
+    "firstRender": "929",
+    "loginClick": "5488",
+    "callToLogin": "5521",
+    "loginDone": "6472",
+    "privatePageRendered": "6484"
+  },
+  {
+    "timestamp": "20200416-13:4:48",
+    "firstRender": "917",
+    "loginClick": "5474",
+    "callToLogin": "5504",
+    "loginDone": "6475",
+    "privatePageRendered": "6487"
+  },
+  {
+    "timestamp": "20200416-13:4:55",
+    "firstRender": "921",
+    "loginClick": "5477",
+    "callToLogin": "5491",
+    "loginDone": "6449",
+    "privatePageRendered": "6462"
+  },
+  {
+    "timestamp": "20200416-13:5:2",
+    "firstRender": "922",
+    "loginClick": "5479",
+    "callToLogin": "5500",
+    "loginDone": "6619",
+    "privatePageRendered": "6631"
+  },
+  {
+    "timestamp": "20200416-13:5:16",
+    "firstRender": "931",
+    "loginClick": "5488",
+    "callToLogin": "5521",
+    "loginDone": "6474",
+    "privatePageRendered": "6486"
+  },
+  {
+    "timestamp": "20200416-13:5:30",
+    "firstRender": "925",
+    "loginClick": "5483",
+    "callToLogin": "5509",
+    "loginDone": "6502",
+    "privatePageRendered": "6514"
+  },
+  {
+    "timestamp": "20200416-13:5:44",
+    "firstRender": "912",
+    "loginClick": "5469",
+    "callToLogin": "5483",
+    "loginDone": "6404",
+    "privatePageRendered": "6417"
+  },
+  {
+    "timestamp": "20200416-13:5:51",
+    "firstRender": "988",
+    "loginClick": "5545",
+    "callToLogin": "5559",
+    "loginDone": "6494",
+    "privatePageRendered": "6507"
+  },
+  {
+    "timestamp": "20200416-13:5:58",
+    "firstRender": "912",
+    "loginClick": "5469",
+    "callToLogin": "5499",
+    "loginDone": "6428",
+    "privatePageRendered": "6441"
+  },
+  {
+    "timestamp": "20200416-13:6:5",
+    "firstRender": "948",
+    "loginClick": "5505",
+    "callToLogin": "5520",
+    "loginDone": "6448",
+    "privatePageRendered": "6461"
+  },
+  {
+    "timestamp": "20200416-13:6:12",
+    "firstRender": "960",
+    "loginClick": "5517",
+    "callToLogin": "5531",
+    "loginDone": "6511",
+    "privatePageRendered": "6524"
+  },
+  {
+    "timestamp": "20200416-13:6:19",
+    "firstRender": "930",
+    "loginClick": "5487",
+    "callToLogin": "5502",
+    "loginDone": "6438",
+    "privatePageRendered": "6451"
+  },
+  {
+    "timestamp": "20200416-13:6:26",
+    "firstRender": "927",
+    "loginClick": "5483",
+    "callToLogin": "5498",
+    "loginDone": "6419",
+    "privatePageRendered": "6432"
+  },
+  {
+    "timestamp": "20200416-13:6:33",
+    "firstRender": "940",
+    "loginClick": "5497",
+    "callToLogin": "5525",
+    "loginDone": "6500",
+    "privatePageRendered": "6512"
+  },
+  {
+    "timestamp": "20200416-13:6:40",
+    "firstRender": "921",
+    "loginClick": "5478",
+    "callToLogin": "5500",
+    "loginDone": "6472",
+    "privatePageRendered": "6489"
+  },
+  {
+    "timestamp": "20200416-13:6:47",
+    "firstRender": "910",
+    "loginClick": "5467",
+    "callToLogin": "5503",
+    "loginDone": "6409",
+    "privatePageRendered": "6422"
+  }
+]
